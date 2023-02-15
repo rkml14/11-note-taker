@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const uuid = require('./helpers/uuid');
 //Deploying to Heroku, or to run on terminal
 const port = process.env.PORT || 3001;
 
@@ -46,7 +46,7 @@ app.post('/api/notes', (req, res) => {
       oldNotes.push({
         title:req.body.title,
         text:req.body.text, 
-        id:uuidv4()
+        id:uuid(),
       });
     fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err)=>{
       if (err) throw err; 
