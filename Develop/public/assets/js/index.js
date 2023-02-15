@@ -1,5 +1,3 @@
-//PER TAS WE DON'T NEED TO TOUCH THIS
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
