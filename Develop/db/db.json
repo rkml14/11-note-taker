@@ -38,5 +38,15 @@
         "title": "Changed data",
         "text": "this can be deleted",
         "note_id": 8
+    },
+    {
+        "title": "Another note",
+        "text": "full of stuff",
+        "note_id": 9
+    },
+    {
+        "title": "Anothersfdsfsdf note",
+        "text": "full of stuff",
+        "note_id": 10
     }
 ]

@@ -76,6 +76,19 @@ app.delete('/api/notes/:id', (req, res) => {
   });
 });
 
+// // 2nd attempt DELETE Route for a specific tip
+// app.delete('/api/notes/:id', (req, res) => {
+//   const noteID = parseInt(req.params.note_id);
+//   const noteDeleted = notes.find(el => el.id === id);
+//   const index = notes.indexOf(noteDeleted);
+
+//   notes.splice(index, 1);
+//   fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err) => {
+//     if (err) throw err;
+//     res.json(oldNotes);
+//   })
+// });
+
 
 //   fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err) => {
 //     if (err) throw err;
