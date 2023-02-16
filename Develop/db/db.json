@@ -2,11 +2,41 @@
     {
         "title": "Test Title",
         "text": "Test text",
-        "note_id": "0a46"
+        "note_id": 1
     },
     {
         "title": "Run test",
         "text": "1st Test being run",
-        "id": "43b5"
+        "note_id": 2
+    },
+    {
+        "title": "Still testing",
+        "text": "this is number 2",
+        "id": 3
+    },
+    {
+        "title": "Still again",
+        "text": "this is number 3",
+        "note_id": 4
+    },
+    {
+        "title": "Delete",
+        "text": "trying to delete",
+        "note_id": 5
+    },
+    {
+        "title": "Delete a 2nd time",
+        "text": "will this delete",
+        "note_id": 6
+    },
+    {
+        "title": "Delete 4h time",
+        "text": "please delete",
+        "note_id": 7
+    },
+    {
+        "title": "Changed data",
+        "text": "this can be deleted",
+        "note_id": 8
     }
 ]
