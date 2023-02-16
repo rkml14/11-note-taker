@@ -63,12 +63,17 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
   const noteID = parseInt(req.params.note_id);
   fs.readFile('./db/db.json', 'utf8', (err, response) => {
+    const oldNotes = JSON.parse(response);
     for (var i = 0; i < db.length; i++) {
       if (db[i].id === id) {
         db.splice(i, 1);
       }
+      fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err) => {
+        if (err) throw err;
+        res.json(oldNotes);
+      })
     }
-  });9
+  });
 });
 
 
