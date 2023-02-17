@@ -22,10 +22,22 @@ Things I've learned:
 
   ## Installation
 
-There is no need to install anything to run this application, it can be accessed on Heroku via:  
+There is no need to install anything to run this application, it can be accessed on Heroku via:  https://note-taker-rl.herokuapp.com/ 
 
 
   ## Usage
+
+The client should begin by visiting https://note-taker-rl.herokuapp.com/ , and clicking on the Get Started button:
+![note-taker-landing-page-click-get-started](./assets/Note-take-welcome-page.png)
+
+The client can enter in a title for the note and a body of text and click the save icon.  The client can click on the red garbage can to remove notes
+
+![add-title-and-body-of-text](./assets/add-new-note.png)
+
+
+
+A gif on how to use the application: <br>
+![gif-demonstration-of-the-application](./assets/walkthrough.gif)
 
 
 
@@ -45,13 +57,13 @@ There is no need to install anything to run this application, it can be accessed
 The application was tested using Insomnia.
 
 
-![answered-questions-and-the-created-logo-to-the-questions](./Assets/Post-notes-Insomnia.png)
+![answered-questions-and-the-created-logo-to-the-questions](./assets/Post-notes-Insomnia.png)
 
 
   ## Credits
 
-My study buddy! Cassandra Watson https://github.com/cassiewatsonn 
-And the ever Amazing: Dominique Meeks Gombe!
+My study buddy! Cassandra Watson https://github.com/cassiewatsonn <br>
+And The Ever Amazing Dominique Meeks Gombe!
 
   
 
