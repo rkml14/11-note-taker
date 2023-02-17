@@ -4,7 +4,7 @@ const app = express();
 const fs = require('fs');
 const uuid = require('./helpers/uuid');
 
-//Deploying to Heroku, or to run on terminal
+//Deploying to Heroku, or to run on local terminal
 const port = process.env.PORT || 3001;
 
 // Middleware for parsing JSON and url-encoded form data
@@ -24,6 +24,7 @@ app.get('/notes', (req, res) => {
   res.sendFile(__dirname + '/public/notes.html');
 });
 
+//Function to retrieve db.json to be used in Posting and Deleting of notes 
 function getDBContent() {
   const dbStr = fs.readFileSync('./db/db.json', 'utf8');
   return JSON.parse(dbStr);
@@ -35,7 +36,7 @@ app.get('/api/notes', (req, res) => {
     res.json(notes);
 });
 
-//POST route to save new note on request body, add to db.json file & return the new note to the client
+//POST route to save new note on request body, add to db.json file & return the updated note list to the client
 app.post('/api/notes', (req, res) => {
   console.log(req.body);
   let notes = getDBContent() 
@@ -50,19 +51,16 @@ app.post('/api/notes', (req, res) => {
     })
 });
 
-// DELETE Route for a specific tip
+// DELETE Route for a specific note id and return updated note list to the client
 app.delete('/api/notes/:id', (req, res) => {
   const noteID = req.params.id;
-
-   let notes = getDBContent()
-   
+   let notes = getDBContent() 
     notes = notes.filter((note) => note.id !== noteID);
-
     fs.writeFile('db/db.json', JSON.stringify(notes), (err) => {
       if (err) throw err;
       res.json(notes);
     })
 });
 
-//Starts the server
+//Starts the server, note that the variable port is used as this application was also deployed to Heroku
 app.listen(port, () => console.log(`Server started at port ${port}`));
