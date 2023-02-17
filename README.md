@@ -32,12 +32,12 @@ The client should begin by visiting https://note-taker-rl.herokuapp.com/ , and c
 
 The client can enter in a title for the note and a body of text and click the save icon.  The client can click on the red garbage can to remove notes
 
-![add-title-and-body-of-text](./assets/add-new-note.png)
+![add-title-and-body-of-text](./Assets/add-new-note.png)
 
 
 
 A gif on how to use the application: <br>
-![gif-demonstration-of-the-application](./assets/walkthrough.gif)
+![gif-demonstration-of-the-application](./Assets/walkthrough.gif)
 
 
 
@@ -57,7 +57,7 @@ A gif on how to use the application: <br>
 The application was tested using Insomnia.
 
 
-![answered-questions-and-the-created-logo-to-the-questions](./assets/Post-notes-Insomnia.png)
+![answered-questions-and-the-created-logo-to-the-questions](./Assets/Post-notes-Insomnia.png)
 
 
   ## Credits
