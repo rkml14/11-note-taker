@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 // const uuid = require('./helpers/uuid');
-const db = require('./db/db.json');
+let db = require('./db/db.json');
 let id = db.length + 1;
 
 //Deploying to Heroku, or to run on terminal
@@ -49,7 +49,7 @@ app.post('/api/notes', (req, res) => {
       title: req.body.title,
       text: req.body.text,
       // note_id:uuid(),
-      note_id: id++,
+      id: id++,
     });
     fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err) => {
       if (err) throw err;
@@ -61,20 +61,18 @@ app.post('/api/notes', (req, res) => {
 
 // DELETE Route for a specific tip
 app.delete('/api/notes/:id', (req, res) => {
-  const noteID = parseInt(req.params.note_id);
-  fs.readFile('./db/db.json', 'utf8', (err, response) => {
-    const oldNotes = JSON.parse(response);
-    for (var i = 0; i < db.length; i++) {
-      if (db[i].id === id) {
-        db.splice(i, 1);
-      }
-      fs.writeFile('db/db.json', JSON.stringify(oldNotes, null, 4), (err) => {
-        if (err) throw err;
-        res.json(oldNotes);
-      })
+  const noteID = req.params.id;
+  for (var i = 0; i < db.length; i++) {
+    if (db[i].id === noteID) {
+      db.splice(i, 1);
     }
-  });
+    fs.writeFile('db/db.json', JSON.stringify(db), (err) => {
+      if (err) throw err;
+      res.json(db);
+    })
+  }
 });
+
 
 // // 2nd attempt DELETE Route for a specific tip
 // app.delete('/api/notes/:id', (req, res) => {
