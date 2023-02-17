@@ -28,7 +28,7 @@ There is no need to install anything to run this application, it can be accessed
   ## Usage
 
 The client should begin by visiting https://note-taker-rl.herokuapp.com/ , and clicking on the Get Started button:
-![note-taker-landing-page-click-get-started](./assets/Note-take-welcome-page.png)
+![note-taker-landing-page-click-get-started](./Assets/Note-take-welcome-page.png)
 
 The client can enter in a title for the note and a body of text and click the save icon.  The client can click on the red garbage can to remove notes
 
