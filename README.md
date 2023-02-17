@@ -45,12 +45,13 @@ There is no need to install anything to run this application, it can be accessed
 The application was tested using Insomnia.
 
 
-ADD INSOMNIA TEST PICTURES HERE
+![answered-questions-and-the-created-logo-to-the-questions](./Assets/Post-notes-Insomnia.png)
 
 
   ## Credits
 
 My study buddy! Cassandra Watson https://github.com/cassiewatsonn 
+And the ever Amazing: Dominique Meeks Gombe!
 
   
 
