@@ -63,8 +63,8 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
   const noteID = req.params.id;
   for (var i = 0; i < db.length; i++) {
-    if (db[i].id === noteID) {
-      db.splice(i, 1);
+    if (db[i].id == noteID) {
+      db = db.splice(i, 1);
     }
     fs.writeFile('db/db.json', JSON.stringify(db), (err) => {
       if (err) throw err;

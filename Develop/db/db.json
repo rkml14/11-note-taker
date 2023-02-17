@@ -1,12 +1,1 @@
-[
-    {
-        "title": "Call Supplier",
-        "text": "looking for credit for late delivery",
-        "id": 1
-    },
-    {
-        "title": "Call Temp Agency",
-        "text": "Need extra hands for Christmas season",
-        "id": 2
-    }
-]
+[{"title":"Call Temp Agency","text":"Need extra hands for Christmas season","id":1}]
