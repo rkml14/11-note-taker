@@ -1,4 +1,3 @@
-console.log("THIS IS A TEST!!!")
 //Required libraries 
 const express = require('express');
 const app = express();
@@ -66,4 +65,4 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 //Starts the server
-app.listen(3001, () => console.log("Server started at port 3001"));
+app.listen(port, () => console.log(`Server started at port ${port}`));
